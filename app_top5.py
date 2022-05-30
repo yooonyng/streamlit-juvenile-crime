@@ -36,7 +36,3 @@ def run_top5():
     fig = px.bar(top5_chart, x='범죄분류', y='총범죄건수')
     st.plotly_chart(fig)
 
-    # df4_sorted = df4.sort_values('Sum',ascending=False)
-    # fig2 = px.bar(df4_sorted,x='lang',y='Sum')
-    # st.plotly_chart(fig2)
-
