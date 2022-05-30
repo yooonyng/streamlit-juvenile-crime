@@ -7,7 +7,6 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 
 
-
 def run_top5():
     df_crime = pd.read_csv('data/대검찰청_소년범죄자 범행동기_20171231.csv',encoding='cp949')
 

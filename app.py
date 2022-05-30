@@ -1,6 +1,7 @@
 import streamlit as st
 from app_crime import run_crime
 from app_top5 import run_top5
+from app_parents import run_parents
 
 
 def main():
@@ -14,7 +15,7 @@ def main():
     elif choice == menu[1]:
         run_top5()
     elif choice == menu[2]:
-        pass
+        run_parents()
     elif choice == menu[3]:
         pass
     elif choice == menu[4]:
