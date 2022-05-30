@@ -5,7 +5,6 @@ from app_top5 import run_top5
 
 def main():
     st.title('소년범죄')
-    st.subheader('This is a subheader')
 
     menu = ['소년범죄','상위 범죄순위','부모관계','교육정도','정신상태','전회처분 상황','처분결과 상황','재범기간']
     choice = st.sidebar.selectbox('메뉴 선택',menu)
