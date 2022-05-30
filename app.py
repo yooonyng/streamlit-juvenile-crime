@@ -12,7 +12,7 @@ def main():
     if choice == menu[0]:
         run_crime()
     elif choice == menu[1]:
-        run_top5
+        run_top5()
     elif choice == menu[2]:
         pass
     elif choice == menu[3]:
