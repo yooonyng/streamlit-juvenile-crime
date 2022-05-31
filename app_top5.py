@@ -31,8 +31,13 @@ def run_top5():
     top5 = df_crime['총범죄건수'].sort_values(ascending=False).head()
     top5 = top5.to_frame()
     top5_chart = top5.reset_index()
-    plt.figure(figsize=(10,8))
     
-    fig = px.bar(top5_chart, x='범죄분류', y='총범죄건수')
-    st.plotly_chart(fig)
+    fig1 = px.bar(top5_chart, x='범죄분류', y='총범죄건수')
+    st.plotly_chart(fig1)
 
+    top10 = df_crime['총범죄건수'].sort_values(ascending=False).head(10)
+    top10 = top10.to_frame()
+    top10_chart = top10.reset_index()
+
+    fig2 = px.bar(top10_chart, x='범죄분류', y='총범죄건수')
+    st.plotly_chart(fig2)
