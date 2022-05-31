@@ -35,7 +35,9 @@ def run_result1():
 
     df_re1_5 = df_result1[['초범','기소유예','선도유예','보호처분','형(재산형포함)집행종료']]
     df_re1_5_sum = df_re1_5.sum().to_frame()
+
     
+    st.subheader('전회처분 상황')
 
     fig1 = px.pie(df_re1_5_sum,names=['초범', '기소유예', '선도유예', '보호처분', '형(재산형포함)집행종료'],
         values=[35477, 7632, 1389, 12016, 2885],

@@ -46,6 +46,7 @@ def run_again():
 
 
     st.subheader('소년범죄 동종재범 기간')
+
     fig1 = px.bar(df_again_1_T, x=df_again_1_T.columns, y=df_again_1_T.index, orientation='h')
     st.plotly_chart(fig1)
 
@@ -55,6 +56,7 @@ def run_again():
 
 
     st.subheader('소년범죄 이종재범 기간')
+    
     fig2 = px.bar(df_again_2_T, x=df_again_2_T.columns, y=df_again_2_T.index, orientation='h')
     st.plotly_chart(fig2)
    
