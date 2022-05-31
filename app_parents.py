@@ -42,9 +42,10 @@ def run_parents():
     df_connect = pd.merge(df_crime,df_parents,on='범죄분류')
     df_connect = df_connect.sort_values('총범죄건수',ascending=False)
 
+    st.subheader('소년범과 부모관계')
 
     language = ['실(양)부모','미혼자부모관계','무부모','기혼','미상']
-    my_choice = st.selectbox('부모 관계 선택',language)
+    my_choice = st.selectbox(language)
     
     if my_choice == language[0]:
         alt_chart = alt.Chart(df_connect).mark_circle().encode(

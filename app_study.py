@@ -39,10 +39,10 @@ def run_study():
    df_study_sum = df_study.sum().to_frame()
    plt.figure(figsize=(30,12))
 
+   st.subheader('소년범 교육정도')
 
    fig1 = px.pie(df_study_sum,names=['중학교_재중', '중학교_중퇴', '중학교_졸업', '고등학교_재중', '고등학교_중퇴', '고등학교_졸업'],
-         values=[13286, 1395, 1748, 23084, 9492, 4232],
-         title='소년범죄 교육정도')
+         values=[13286, 1395, 1748, 23084, 9492, 4232])
    st.plotly_chart(fig1)
 
 

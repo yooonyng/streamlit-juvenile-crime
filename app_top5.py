@@ -28,12 +28,14 @@ def run_top5():
     df_crime = df_crime.drop(['부주의',	'기타',	'미상'],axis=1)
     df_crime = df_crime[['생활비마련','유흥비사치','호기심유혹우발적','가정불화', '신고보복','기타미상','총범죄건수']]
 
-    top5 = df_crime['총범죄건수'].sort_values(ascending=False).head()
-    top5 = top5.to_frame()
-    top5_chart = top5.reset_index()
+    # top5 = df_crime['총범죄건수'].sort_values(ascending=False).head()
+    # top5 = top5.to_frame()
+    # top5_chart = top5.reset_index()
     
-    fig1 = px.bar(top5_chart, x='범죄분류', y='총범죄건수')
-    st.plotly_chart(fig1)
+    # fig1 = px.bar(top5_chart, x='범죄분류', y='총범죄건수')
+    # st.plotly_chart(fig1)
+
+    st.subheader('상위 범죄 순위 Top10')
 
     top10 = df_crime['총범죄건수'].sort_values(ascending=False).head(10)
     top10 = top10.to_frame()
