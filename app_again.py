@@ -44,21 +44,18 @@ def run_again():
     df_again_1_T = df_again_1.T
     df_again_1_T = df_again_1_T.drop(['장물','횡령','손괴','방화','살인'],axis=1)
 
-    st.dataframe(df_again_1_T)
 
-     
-    fig1 = plt.figure()
-    df_again_1_T.plot(kind='barh', figsize=(10,6), stacked=True, alpha=0.7)
-    plt.title('소년범죄 동종재범 기간', size=20)
-    plt.savefig('test.png')
-    st.pyplot(fig1)
-   
-
+    st.subheader('소년범죄 동종재범 기간')
+    fig1 = px.bar(df_again_1_T, x=df_again_1_T.columns, y=df_again_1_T.index, orientation='h')
+    st.plotly_chart(fig1)
 
 
     df_again_2_T = df_again_2.T
     df_again_2_T = df_again_2_T.drop(['장물','강도','횡령','방화','살인'],axis=1)
 
-    st.dataframe(df_again_2_T)
+
+    st.subheader('소년범죄 이종재범 기간')
+    fig2 = px.bar(df_again_2_T, x=df_again_2_T.columns, y=df_again_2_T.index, orientation='h')
+    st.plotly_chart(fig2)
    
 
