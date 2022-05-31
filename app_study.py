@@ -48,11 +48,5 @@ def run_study():
 
    print(df_study_sum.shape)
 
-   fig2 = plt.figure()
-   plt.pie(np.array(df_study_sum.values).ravel(),autopct='%.2f',labels=df_study_sum.index,
-      startangle=90,shadow=True,colors=['silver','lightgray','silver','firebrick','gray','darkgray','lightgray'],textprops={'size':12})
-
-   plt.title('소년범죄 교육정도')
-   plt.legend()
-   st.pyplot(fig2)
+   
 
