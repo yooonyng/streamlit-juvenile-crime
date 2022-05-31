@@ -45,7 +45,7 @@ def run_parents():
     st.subheader('소년범과 부모관계')
 
     language = ['실(양)부모','미혼자부모관계','무부모','기혼','미상']
-    my_choice = st.selectbox(language)
+    my_choice = st.selectbox('부모 관계 선택',language)
     
     if my_choice == language[0]:
         alt_chart = alt.Chart(df_connect).mark_circle().encode(
