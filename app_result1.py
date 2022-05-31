@@ -43,13 +43,5 @@ def run_result1():
     st.plotly_chart(fig1)
 
 
-    fig2 = plt.figure()
-    plt.pie(np.array(df_re1_5_sum).ravel(),autopct='%.2f',labels=df_re1_5_sum.index,
-        startangle=90,shadow=True,colors=['brown','silver','lightgray','silver','gray','darkgray','lightgray'],
-        wedgeprops={'width':0.7}, textprops={'size':12})
-
-    plt.title('소년범죄 전회처분 상황')
-    plt.legend()
-    st.pyplot(fig2)
 
 

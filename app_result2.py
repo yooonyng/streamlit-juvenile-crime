@@ -42,11 +42,3 @@ def run_result2():
         title='소년범죄 처분결과 상황')
     st.plotly_chart(fig1)
 
-    fig2 = plt.figure()
-    plt.pie(np.array(df_re2_6_sum).ravel(),autopct='%.2f',labels=df_re2_6_sum.index,
-    startangle=90,shadow=True,colors=['silver','lightgray','silver','brown','gray','darkgray','lightgray'],
-    wedgeprops={'width':0.7}, textprops={'size':12})
-
-    plt.title('소년범죄 처분결과 상황')
-    plt.legend()
-    st.pyplot(fig2)
