@@ -7,6 +7,25 @@ import altair as alt
 import plotly.express as px
 import matplotlib.pyplot as plt
 
+############### 그래프에서 한국어 인식 ###############
+import platform
+
+from matplotlib import font_manager, rc
+plt.rcParams['axes.unicode_minus'] = False
+
+if platform.system() == 'Darwin':
+    rc('font', family='AppleGothic')
+elif platform.system() == 'Windows':
+    path = "c:/Windows/Fonts/malgun.ttf"
+    font_name = font_manager.FontProperties(fname=path).get_name()
+    rc('font', family=font_name)
+elif platform.system() == 'Linux':
+    rc('font', family='NanumGothic')    
+else:
+    print('Unknown system')
+
+
+
 def run_result1():
     df_result1 = pd.read_csv('data/대검찰청_소년범죄자 전회처분 상황_20171231.csv',encoding='cp949')
 
@@ -19,12 +38,19 @@ def run_result1():
     
     st.dataframe(df_re1_5_sum)
 
-    fig1 = px.pie(df_mental_sum,names=['정상_남', '정상_여', '주취_남', '주취_여', '정신이상_남', '정신이상_여'],
-        values=[45394, 8974, 4544, 729, 419, 40],
-        title='소년범죄 정신상태')
+    fig1 = px.pie(df_re1_5_sum,names=['초범', '기소유예', '선도유예', '보호처분', '형(재산형포함)집행종료'],
+        values=[35477, 7632, 1389, 12016, 2885],
+        title='소년범죄 전회처분 상황')
     st.plotly_chart(fig1)
 
 
-'초범', '기소유예', '선도유예', '보호처분', '형(재산형포함)집행종료'
+    fig2 = plt.figure()
+    plt.pie(np.array(df_re1_5_sum).ravel(),autopct='%.2f',labels=df_re1_5_sum.index,
+        startangle=90,shadow=True,colors=['brown','silver','lightgray','silver','gray','darkgray','lightgray'],
+        wedgeprops={'width':0.7}, textprops={'size':12})
+
+    plt.title('소년범죄 전회처분 상황')
+    plt.legend()
+    st.pyplot(fig2)
 
 

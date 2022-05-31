@@ -7,6 +7,24 @@ import altair as alt
 import plotly.express as px
 import matplotlib.pyplot as plt
 
+############### 그래프에서 한국어 인식 ###############
+import platform
+
+from matplotlib import font_manager, rc
+plt.rcParams['axes.unicode_minus'] = False
+
+if platform.system() == 'Darwin':
+    rc('font', family='AppleGothic')
+elif platform.system() == 'Windows':
+    path = "c:/Windows/Fonts/malgun.ttf"
+    font_name = font_manager.FontProperties(fname=path).get_name()
+    rc('font', family=font_name)
+elif platform.system() == 'Linux':
+    rc('font', family='NanumGothic')    
+else:
+    print('Unknown system')
+
+
 def run_study():
     
    df_study = pd.read_csv('data/대검찰청_소년범죄자 교육정도_20191231.csv',encoding='cp949')
@@ -30,8 +48,6 @@ def run_study():
 
 
    print(df_study_sum.shape)
-
-   plt.rc('font', family='NanumBarunGothic')
 
    fig2 = plt.figure()
    plt.pie(np.array(df_study_sum.values).ravel(),autopct='%.2f',labels=df_study_sum.index,
