@@ -112,7 +112,7 @@ def run_result():
     df_again_2_T = df_again_2_T.drop(['장물','강도','횡령','방화','살인'],axis=1)
 
     st.subheader('5. 이종재범 기간')
-    fig2 = px.bar(df_again_2_T, x=df_again_2_T.columns, y=df_again_2_T.index, orientation='h', color='RdBu')
+    fig2 = px.bar(df_again_2_T, x=df_again_2_T.columns, y=df_again_2_T.index, orientation='h', color='crimson')
     st.plotly_chart(fig2)
     st.text('\n')
     st.text('\n')
