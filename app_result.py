@@ -81,11 +81,16 @@ def run_result():
     st.text('\n')
     
 
+    # values = [100, 200, 300,500]
+    # labels = ['A', 'B', 'C', 'D']
     
+    # fig = px.pie(values=values, names=labels, width=400, height=400, hover_name=labels, title='plotly pie Chart', color_discrete_sequence=px.colors.sequential.Sunset)
+    # fig.show()
+        
     st.subheader('2. 전회처분 상황')
 
     fig1 = px.pie(df_re1_5_sum,names=['초범', '기소유예', '선도유예', '보호처분', '형(재산형포함)집행종료'],
-        values=[35477, 7632, 1389, 12016, 2885])
+        values=[35477, 7632, 1389, 12016, 2885], color_discrete_sequence=px.colors.sequential.Sunset)
     st.plotly_chart(fig1)
 
     st.subheader('3. 처분결과 상황')
