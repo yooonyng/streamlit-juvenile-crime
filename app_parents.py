@@ -122,8 +122,7 @@ def run_parents():
         alt_chart = alt.Chart(df_connect).mark_circle().encode(
         x = '실(양)부모',
         y = '총범죄건수',
-        size = '실(양)부모',
-        color_discrete_sequence=px.colors.sequential.RdBu)
+        size = '실(양)부모')
         st.altair_chart(alt_chart)
 
     elif my_choice == language[1]:
