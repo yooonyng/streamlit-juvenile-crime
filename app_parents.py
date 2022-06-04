@@ -155,12 +155,14 @@ def run_parents():
         
     st.subheader('2. 소년범의 교육 정도')
     fig1 = px.pie(df_study_sum,names=['중학교_재중', '중학교_중퇴', '중학교_졸업', '고등학교_재중', '고등학교_중퇴', '고등학교_졸업'],
-            values=[13286, 1395, 1748, 23084, 9492, 4232])
+            values=[13286, 1395, 1748, 23084, 9492, 4232],
+            color_discrete_sequence=px.colors.sequential.RdBu)
     st.plotly_chart(fig1)
 
     print(df_study_sum.shape)
 
     st.subheader('3. 소년범의 정신 건강 상태')
     fig1 = px.pie(df_mental_sum,names=['정상_남', '정상_여', '주취_남', '주취_여', '정신이상_남', '정신이상_여'],
-            values=[45394, 8974, 4544, 729, 419, 40])
+            values=[45394, 8974, 4544, 729, 419, 40],
+            color_discrete_sequence=px.colors.sequential.RdBu)
     st.plotly_chart(fig1)
