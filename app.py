@@ -9,7 +9,7 @@ from app_result import run_result
 def main():
 
     menu = ['소년범죄','사회적 시선','주변 환경','전회처분과 처분결과 상황']
-    choice = st.sidebar.selectbox('메뉴 선택',menu)
+    choice = st.sidebar.selectbox('Menu',menu)
 
     if choice == menu[0]:
         run_crime()
