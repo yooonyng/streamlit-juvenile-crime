@@ -6,13 +6,13 @@ from PIL import Image
 import os
 import base64
 
-# def run_crime():
-#     st.title('🚔소년범죄와 주변환경의 관계')
-#     st.text('\n')
+def run_crime():
+    st.title('🚔소년범죄와 주변환경의 관계')
+    st.text('\n')
 
-#     image = Image.open('data/img01.jpg')
-#     st.image(image)
-#     st.text('\n')
+    image = Image.open('data/img01.jpg')
+    st.image(image)
+    st.text('\n')
 
 #     st.info("목차\n1. 소년 범죄의 개념\n2. 소년 범죄의 유형\n3. 소년 범죄의 특징\n4. 소년 범죄의 원인")
 #     st.text('\n')
