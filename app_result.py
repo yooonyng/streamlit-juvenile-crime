@@ -94,7 +94,7 @@ def run_result():
 
     fig1 = px.pie(df_re1_5_sum,names=['초범', '기소유예', '선도유예', '보호처분', '형(재산형포함)집행종료'],
         values=[35477, 7632, 1389, 12016, 2885], 
-        color_discrete_map={'A':'green','B':'cyan','C':'yellow','D':'darkblue'})
+        color_discrete_sequence=px.colors.sequential.RdBu)
     st.plotly_chart(fig1)
 
     st.subheader('3. 처분결과 상황')
