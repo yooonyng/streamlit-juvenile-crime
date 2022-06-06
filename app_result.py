@@ -120,13 +120,4 @@ def run_result():
     st.text('\n')
    
 
-    st.header('⚖️')
-    st.subheader('잘못을 깨달을 수 있는 처벌은 적절하게 내려져야 하지만, 그 처벌마저 가르침의 역할이 있어야 의미가 있다.')
-    st.subheader('왜냐하면 소년범은 ‘그 이후’를 또 한참 살아가기 때문에. 어느 섬이나 다른 나라에 치워지는 것이 아니라, 우리 사회에서 함께 말이다.')
-    st.subheader('피해자를 최우선으로 보호하면서, 가해자에게 기회를 줌으로써 또 다른 가해의 연쇄를 끊는 것이 얼마나 중요한지')
-    st.caption('출처: 경향신문 플랫 https://www.khan.co.kr/culture/culture-general/article/202203071450001')
-    
-
-
-
 
