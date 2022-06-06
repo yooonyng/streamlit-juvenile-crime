@@ -13,18 +13,6 @@ import base64
 
 def main():
 
-    # menu = ['소년범죄','사회적 시선','주변 환경','전회처분과 처분결과 상황']
-    # choice = st.sidebar.selectbox('Menu',menu)
-
-    # if choice == menu[0]:
-    #     run_crime()
-    # elif choice == menu[1]:
-    #     run_top10()
-    # elif choice == menu[2]:
-    #     run_parents()
-    # elif choice == menu[3]:
-    #     run_result()
-
     st.title('🚔소년범죄와 주변환경의 관계')
     st.text('\n')
 
@@ -71,9 +59,9 @@ def main():
             </a>'''
         return html_code
 
+    st.info("1. 사회적 시선과 의견 대립\n2. 소년범의 주변 환경\n3. 전회처분과 처분결과 상황")
     st.title('➡️ 사회적 시선과 의견 대립')
     st.text('\n')
-    st.info("1. 소년 범죄 순위 Top10\n2. 최근 소년범죄 이슈\n3. 최근 소년범죄 관련 기사\n4. 소년범죄에 대한 의견 대립")
     st.text('\n')
     st.text('\n')
 
@@ -127,16 +115,8 @@ def main():
     st.text('\n')
     st.text('\n')
 
-    st.subheader('3. 최근 소년범죄 관련 기사')
-    st.markdown('<big>[갈수록 흉포해지는 소년범죄, 처벌 연령 낮추는 게 옳다](https://www.mk.co.kr/opinion/editorial/view/2022/03/288888/)',unsafe_allow_html=True)
-    st.markdown('<big>[늘어나는 10대 강력범죄‥ 69년 된 촉법소년 논란](https://imnews.imbc.com/replay/2022/nwdesk/article/6337168_35744.html)',unsafe_allow_html=True)
-    st.markdown('<big>[촉법소년 범죄자 1만명...연령 하한에 엄벌 VS 신중](https://www.ajunews.com/view/20220520093302711)',unsafe_allow_html=True)
-    st.text('\n')
-    st.text('\n')
-    st.text('\n')
-    st.text('\n')
-
-    st.subheader('4. 소년범죄에 대한 의견 대립')
+   
+    st.subheader('3. 소년범죄에 대한 의견 대립')
     image = Image.open('data/img03.jpg')
     st.image(image)
     st.text('\n')
@@ -227,7 +207,6 @@ def main():
    
     st.title('➡️ 소년범의 주변 환경')
     st.text('\n')
-    st.info("1. 소년범의 부모 관계\n2. 소년범의 교육 정도\n3. 소년범의 정신 건강 상태")
     st.text('\n')
     st.text('\n')
 
@@ -336,7 +315,6 @@ def main():
 
     st.title('➡️ 전회처분과 처분결과 상황')
     st.text('\n')
-    st.info("1. 소년범의 종류\n2. 전회처분 상황\n3. 처분결과 상황\n4. 동종재범 기간\n5. 이종재범 기간")
     st.text('\n')
     st.text('\n')
 
@@ -351,16 +329,6 @@ def main():
     st.caption('출처: 위키피디아')
     st.text('\n')
     st.text('\n')
-    
-
-    # values = [100, 200, 300,500]
-    # labels = ['A', 'B', 'C', 'D']
-    
-    # # fig = px.pie(values=values, names=labels, width=400, height=400, hover_name=labels, title='plotly pie Chart', color=labels,color_discrete_map={'A':'green',
-    #                              'B':'cyan',
-    #                              'C':'yellow',
-    #                              'D':'darkblue'})
-    # fig.show()
         
     st.subheader('2. 전회처분 상황')
 
