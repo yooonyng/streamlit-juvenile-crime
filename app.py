@@ -20,8 +20,6 @@ def main():
     st.image(image)
     st.text('\n')
 
-
-
     df_crime = pd.read_csv('data/대검찰청_소년범죄자 범행동기_20171231.csv',encoding='cp949')
 
     df_crime.head()
@@ -42,7 +40,6 @@ def main():
     df_crime = df_crime.drop(['부주의',	'기타',	'미상'],axis=1)
     df_crime = df_crime[['생활비마련','유흥비사치','호기심유혹우발적','가정불화', '신고보복','기타미상','총범죄건수']]
 
-
     @st.cache(allow_output_mutation=True)
     def get_base64_of_bin_file(bin_file):
         with open(bin_file, 'rb') as f:
@@ -59,7 +56,6 @@ def main():
             </a>'''
         return html_code
 
-    
 
     st.info("1. 사회적 시선과 의견 대립\n2. 소년범의 주변 환경\n3. 전회처분과 처분결과 상황")
     st.text('\n')
@@ -75,7 +71,7 @@ def main():
     top10 = top10.to_frame()
     top10_chart = top10.reset_index()
 
-    fig2 = px.bar(top10_chart, x='범죄분류', y='총범죄건수')
+    fig2 = px.bar(top10_chart, x='범죄분류', y='총범죄건수',color_discrete_sequence=['firebrick'])
     st.plotly_chart(fig2)
     st.text('\n')
     st.text('\n')
@@ -239,35 +235,35 @@ def main():
         alt_chart = alt.Chart(df_connect).mark_circle().encode(
         x = '실(양)부모',
         y = '총범죄건수',
-        size = '실(양)부모')
+        size = '실(양)부모').configure_mark(opacity=0.45,color='brown')
         st.altair_chart(alt_chart)
 
     elif my_choice == language[1]:
         alt_chart = alt.Chart(df_connect).mark_circle().encode(
         x = '미혼자부모관계',
         y = '총범죄건수',
-        size = '미혼자부모관계')
+        size = '미혼자부모관계').configure_mark(opacity=0.45,color='brown')
         st.altair_chart(alt_chart)
 
     elif my_choice == language[2]:
         alt_chart = alt.Chart(df_connect).mark_circle().encode(
         x = '무부모',
         y = '총범죄건수',
-        size = '무부모')
+        size = '무부모').configure_mark(opacity=0.45,color='brown')
         st.altair_chart(alt_chart)
 
     elif my_choice == language[3]:
         alt_chart = alt.Chart(df_connect).mark_circle().encode(
         x = '기혼',
         y = '총범죄건수',
-        size = '기혼')
+        size = '기혼').configure_mark(opacity=0.45,color='brown')
         st.altair_chart(alt_chart)
     
     elif my_choice == language[4]:
         alt_chart = alt.Chart(df_connect).mark_circle().encode(
         x = '미상',
         y = '총범죄건수',
-        size = '미상')
+        size = '미상').configure_mark(opacity=0.45,color='brown')
         st.altair_chart(alt_chart)
         
     st.subheader('2. 소년범의 교육 정도')
