@@ -59,7 +59,12 @@ def main():
             </a>'''
         return html_code
 
+    
+
     st.info("1. 사회적 시선과 의견 대립\n2. 소년범의 주변 환경\n3. 전회처분과 처분결과 상황")
+    st.text('\n')
+    st.text('\n')
+    st.write('---')
     st.title('➡️ 사회적 시선과 의견 대립')
     st.text('\n')
     st.text('\n')
@@ -75,6 +80,7 @@ def main():
     st.text('\n')
     st.text('\n')
     st.text('\n')
+
 
     st.subheader('2. 최근 소년범죄 이슈')
     col1,col2,col3 = st.columns(3)
@@ -114,7 +120,6 @@ def main():
     st.text('\n')
     st.text('\n')
     st.text('\n')
-
    
     st.subheader('3. 소년범죄에 대한 의견 대립')
     image = Image.open('data/img03.jpg')
@@ -204,7 +209,8 @@ def main():
             </a>'''
         return html_code
     
-   
+    
+    st.write('---')
     st.title('➡️ 소년범의 주변 환경')
     st.text('\n')
     st.text('\n')
@@ -311,8 +317,9 @@ def main():
     df_again_sum = df_again.sum().to_frame()
     df_again_1_T = df_again_1.T
     df_again_1_T = df_again_1_T.drop(['장물','횡령','손괴','방화','살인'],axis=1)
+    
 
-
+    st.write('---')
     st.title('➡️ 전회처분과 처분결과 상황')
     st.text('\n')
     st.text('\n')
