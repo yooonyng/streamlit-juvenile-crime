@@ -61,7 +61,7 @@ def main():
     st.text('\n')
     st.text('\n')
     st.write('---')
-    st.title('➡️ 사회적 시선과 의견 대립')
+    st.title('📌 사회적 시선과 의견 대립')
     st.text('\n')
     st.text('\n')
     st.text('\n')
@@ -207,7 +207,7 @@ def main():
     
     
     st.write('---')
-    st.title('➡️ 소년범의 주변 환경')
+    st.title('📌 소년범의 주변 환경')
     st.text('\n')
     st.text('\n')
     st.text('\n')
@@ -316,7 +316,7 @@ def main():
     
 
     st.write('---')
-    st.title('➡️ 전회처분과 처분결과 상황')
+    st.title('📌 전회처분과 처분결과 상황')
     st.text('\n')
     st.text('\n')
     st.text('\n')
