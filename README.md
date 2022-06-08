@@ -22,6 +22,18 @@
 - 대검찰청_소년범죄자 처분결과
 - 대검찰청_소년범죄자 재범기간 및 종류
 ``` 
+``` C
+import streamlit as st
+import joblib
+import numpy as np
+import pandas as pd
+import altair as alt
+import plotly.express as px
+import matplotlib.pyplot as plt
+from PIL import Image
+import os
+import base64
+``` 
 소년범죄 데이터를 확인해서
 범죄분류를 인덱스로 만들었고 총 범죄건수를 합쳐서 컬럼에 추가해준다.
 
