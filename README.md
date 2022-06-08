@@ -116,7 +116,6 @@ st.plotly_chart(fig1)
 - [📁 네이버 심리학용어사전](https://terms.naver.com/entry.naver?cid=41991&docId=2070185&categoryId=41991)
 
 
----
 ## 6️⃣. 일정
 
 | Day | 작업 | 내용 |
